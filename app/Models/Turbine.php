@@ -2,12 +2,17 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 
 /**
- * @property int id
+ * @property int $id
+ * @property Blade[]|Collection $blades
+ * @property Hub $hub
+ * @property Rotor $rotor
+ * @property Generator $generator
  */
 class Turbine extends Model
 {
