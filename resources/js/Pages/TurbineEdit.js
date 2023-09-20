@@ -23,7 +23,7 @@ export default function TurbineEdit() {
         e.preventDefault();
 
         axios.put(`/api/turbines/${id}`, turbine)
-            .then(response => {
+            .then(() => {
                 setMessage('Updated successfully.');
             })
             .catch(() => {
