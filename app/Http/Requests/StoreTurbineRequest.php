@@ -16,10 +16,10 @@ class StoreTurbineRequest extends FormRequest
     {
         return [
             'blades' => 'array|max:3',
-            'blades.*.grade' => 'integer|max:5',
-            'rotor.grade' => 'integer|max:5',
-            'hub.grade' => 'integer|max:5',
-            'generator.grade' => 'integer|max:5',
+            'blades.*.grade' => 'nullable|integer|max:5',
+            'rotor.grade' => 'nullable|integer|max:5',
+            'hub.grade' => 'nullable|integer|max:5',
+            'generator.grade' => 'nullable|integer|max:5',
         ];
     }
 
