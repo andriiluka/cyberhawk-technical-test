@@ -68,3 +68,52 @@ composer install --ignore-platform-reqs
 
 ## Your Notes
 This is a place for you to add your notes, plans, thinking and any feedback you have for us of the task, please feel free to include whatever you like here, we'll make sure to read it. 
+
+### Additional Setup Steps
+
+Steps after [Setting Everything Up](#setting-everything-up).
+
+Run database migrations:
+
+```bash
+./vendor/bin/sail php artisan migrate
+```
+
+Run database seeders:
+
+```bash
+./vendor/bin/sail php artisan db:seed
+```
+
+Install npm dependencies:
+
+```bash
+./vendor/bin/sail npm install
+```
+
+Compile web app:
+
+```bash
+./vendor/bin/sail npm run dev
+```
+
+Navigate to [http://localhost](http://localhost) to browse the app. Use credentials below for login:
+
+Email: `user@example.com`  
+Password: `password`
+
+### Testing
+
+Run tests:
+
+```bash
+./vendor/bin/sail php artisan test
+````
+
+### Coding Style
+
+To fix PHP code styles according to PSR12, run:
+
+```bash
+./vendor/bin/sail pint --preset psr12
+```
